@@ -25,9 +25,11 @@ def get_documents():
     Retrieve shuffled movie reviews from the nltk
     """
 
-    return [(list(movie_reviews.words(fileid)), category)
-            for category in movie_reviews.categories()
-            for fileid in movie_reviews.fileids(category)]
+    reviews = [(list(movie_reviews.words(fileid)), category)
+               for category in movie_reviews.categories()
+               for fileid in movie_reviews.fileids(category)]
+    
+    return random.shuffle(reviews)
 
 def get_features(documents):
     """
@@ -42,23 +44,28 @@ def get_features(documents):
 
     test_words = nltk.FreqDist(w.lower() for w in movie_reviews.words() if w not in my_stopwords)
     top_words = [i[0] for i in list(test_words.most_common(200))]
-    for i in top_words:
-        print i
-    return top_words
+    return test_words
     
             
 def get_more_features(documents):
     """
     Get bigrams
-    Probably could have done stopword removal as its own thing
     """
     print ("Creating Bigram features")
 
-    # stopwords
-    my_stopwords = stopwords.words('english')
-    my_stopwords.extend(list(set(string.punctuation)))
-    
-	
+    my_stopwords = get_stopwords()
+
+    # get list of all the words
+    all_words = [w.lower() for w in movie_reviews.words() if w not in my_stopwords]
+
+    # list of bigrams
+    bigrams = list(ngrams(all_words, 2))
+
+    # get top 200
+    freq_dist_bi = list(nltk.FreqDist(bigrams).most_common(200))
+
+    return [i[0] for i in freq_dist_bi]
+
 
 def featuresets(features, documents):
     """
@@ -75,11 +82,12 @@ def train_test(features_sets, documents):
 def main():
     # get the reviews
     reviews_list = get_documents()
-    random.shuffle(reviews_list)
 
     # get the unigram featureset
     unigram_feats = get_features(reviews_list)
-    # bigram_feats = get_more_features(reviews_list)
+
+    # get bigrams
+    bigram_feats = get_more_features(reviews_list)
 	
 	
 if __name__ == '__main__':
