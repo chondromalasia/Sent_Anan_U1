@@ -1,201 +1,201 @@
 Creating Unigram features
-(u'film', 9517)
-(u'one', 5852)
-(u'movie', 5771)
-(u'like', 3690)
-(u'even', 2565)
-(u'time', 2411)
-(u'good', 2411)
-(u'story', 2169)
-(u'would', 2109)
-(u'much', 2049)
-(u'character', 2020)
-(u'also', 1967)
-(u'get', 1949)
-(u'two', 1911)
-(u'well', 1906)
-(u'characters', 1859)
-(u'first', 1836)
-(u'--', 1815)
-(u'see', 1749)
-(u'way', 1693)
-(u'make', 1642)
-(u'life', 1586)
-(u'really', 1558)
-(u'films', 1536)
-(u'plot', 1513)
-(u'little', 1501)
-(u'people', 1455)
-(u'could', 1427)
-(u'scene', 1397)
-(u'man', 1396)
-(u'bad', 1395)
-(u'never', 1374)
-(u'best', 1333)
-(u'new', 1292)
-(u'scenes', 1274)
-(u'many', 1268)
-(u'director', 1237)
-(u'know', 1217)
-(u'movies', 1206)
-(u'action', 1172)
-(u'great', 1148)
-(u'another', 1121)
-(u'love', 1119)
-(u'go', 1113)
-(u'made', 1084)
-(u'us', 1073)
-(u'big', 1064)
-(u'end', 1062)
-(u'something', 1061)
-(u'back', 1060)
-(u'still', 1047)
-(u'world', 1037)
-(u'seems', 1033)
-(u'work', 1020)
-(u'makes', 992)
-(u'however', 989)
-(u'every', 947)
-(u'though', 940)
-(u'better', 922)
-(u'real', 915)
-(u'audience', 914)
-(u'enough', 910)
-(u'seen', 910)
-(u'take', 905)
-(u'around', 903)
-(u'going', 888)
-(u'year', 886)
-(u'performance', 886)
-(u'role', 872)
-(u'old', 870)
-(u'gets', 865)
-(u'may', 857)
-(u'things', 852)
-(u'think', 849)
-(u'years', 846)
-(u'last', 843)
-(u'comedy', 840)
-(u'funny', 840)
-(u'actually', 837)
-(u'long', 836)
-(u'look', 835)
-(u'almost', 820)
-(u'thing', 809)
-(u'fact', 805)
-(u'nothing', 804)
-(u'say', 802)
-(u'john', 798)
-(u'right', 798)
-(u'although', 795)
-(u'played', 791)
-(u'find', 782)
-(u'script', 778)
-(u'come', 777)
-(u'ever', 776)
-(u'cast', 769)
-(u'since', 768)
-(u'star', 761)
-(u'plays', 752)
-(u'young', 743)
-(u'show', 741)
-(u'comes', 733)
-(u'part', 714)
-(u'original', 712)
-(u'actors', 706)
-(u'screen', 705)
-(u'without', 697)
-(u'three', 695)
-(u'acting', 695)
-(u'day', 688)
-(u'point', 685)
-(u'lot', 677)
-(u'least', 676)
-(u'takes', 674)
-(u'guy', 664)
-(u'quite', 660)
-(u'away', 655)
-(u'family', 652)
-(u'effects', 649)
-(u'course', 648)
-(u'goes', 646)
-(u'minutes', 644)
-(u'interesting', 638)
-(u'might', 635)
-(u'far', 635)
-(u'high', 624)
-(u'rather', 621)
-(u'anything', 618)
-(u'must', 618)
-(u'place', 615)
-(u'set', 610)
-(u'yet', 608)
-(u'watch', 603)
-(u'making', 602)
-(u'wife', 588)
-(u'hard', 587)
-(u'always', 586)
-(u'fun', 584)
-(u'special', 574)
-(u'seem', 574)
-(u'times', 568)
-(u'bit', 568)
-(u'trying', 566)
-(u'hollywood', 566)
-(u'instead', 565)
-(u'give', 561)
-(u'want', 560)
-(u'picture', 560)
-(u'american', 559)
-(u'kind', 559)
-(u'job', 556)
-(u'sense', 555)
-(u'woman', 554)
-(u'home', 550)
-(u'series', 548)
-(u'actor', 546)
-(u'probably', 539)
-(u'help', 537)
-(u'half', 535)
-(u'along', 533)
-(u'men', 532)
-(u'everything', 530)
-(u'pretty', 528)
-(u'becomes', 526)
-(u'sure', 523)
-(u'black', 523)
-(u'together', 522)
-(u'dialogue', 519)
-(u'money', 512)
-(u'become', 511)
-(u'gives', 507)
-(u'given', 502)
-(u'looking', 501)
-(u'whole', 495)
-(u'watching', 493)
-(u'father', 492)
-(u'feel', 485)
-(u'everyone', 484)
-(u'music', 480)
-(u'wants', 477)
-(u'sex', 476)
-(u'done', 475)
-(u'less', 475)
-(u'horror', 473)
-(u'got', 470)
-(u'death', 468)
-(u'perhaps', 464)
-(u'city', 459)
-(u'next', 458)
-(u'especially', 456)
-(u'play', 453)
-(u'girl', 452)
-(u'mind', 451)
-(u'10', 449)
-(u'moments', 447)
-(u'looks', 443)
-(u'completely', 440)
-(u'2', 439)
-(u'reason', 437)
-(u'mother', 437)
-(u'whose', 436)
+film
+one
+movie
+like
+even
+time
+good
+story
+would
+much
+character
+also
+get
+two
+well
+characters
+first
+--
+see
+way
+make
+life
+really
+films
+plot
+little
+people
+could
+scene
+man
+bad
+never
+best
+new
+scenes
+many
+director
+know
+movies
+action
+great
+another
+love
+go
+made
+us
+big
+end
+something
+back
+still
+world
+seems
+work
+makes
+however
+every
+though
+better
+real
+audience
+enough
+seen
+take
+around
+going
+year
+performance
+role
+old
+gets
+may
+things
+think
+years
+last
+comedy
+funny
+actually
+long
+look
+almost
+thing
+fact
+nothing
+say
+john
+right
+although
+played
+find
+script
+come
+ever
+cast
+since
+star
+plays
+young
+show
+comes
+part
+original
+actors
+screen
+without
+three
+acting
+day
+point
+lot
+least
+takes
+guy
+quite
+away
+family
+effects
+course
+goes
+minutes
+interesting
+might
+far
+high
+rather
+anything
+must
+place
+set
+yet
+watch
+making
+wife
+hard
+always
+fun
+special
+seem
+times
+bit
+trying
+hollywood
+instead
+give
+want
+picture
+american
+kind
+job
+sense
+woman
+home
+series
+actor
+probably
+help
+half
+along
+men
+everything
+pretty
+becomes
+sure
+black
+together
+dialogue
+money
+become
+gives
+given
+looking
+whole
+watching
+father
+feel
+everyone
+music
+wants
+sex
+done
+less
+horror
+got
+death
+perhaps
+city
+next
+especially
+play
+girl
+mind
+10
+moments
+looks
+completely
+2
+reason
+mother
+whose
