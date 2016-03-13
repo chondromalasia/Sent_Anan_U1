@@ -18,9 +18,9 @@ def get_documents():
     Retrieve shuffled movie reviews from the nltk
     """
 
-    return random.shuffle([(list(movie_reviews.words(fileid)), category)
+    return [(list(movie_reviews.words(fileid)), category)
             for category in movie_reviews.categories()
-            for fileid in movie_reviews.fileids()])
+            for fileid in movie_reviews.fileids(category)]
 	
 	
 
@@ -57,6 +57,8 @@ def train_test(features_sets, documents):
 def main():
     # get the reviews
     reviews_list = get_documents()
+    random.shuffle(reviews_list)
+    print type(reviews_list)
 
     # get the unigram featureset
     unigram_feats = get_features(reviews_list)
