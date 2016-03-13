@@ -9,7 +9,7 @@
 
 ################
 import random
-from nltk.corpus import movie_reviews
+from nltk.corpus import movie_reviews, stopwords
 
 
 
@@ -28,6 +28,11 @@ def get_features(documents):
     """
     Extract unigrams from the training set
     """
+
+    print("Creating Unigram features")
+
+    # get the top 100 unigrams
+
 		
 	
 	
@@ -50,10 +55,11 @@ def train_test(features_sets, documents):
 	
     
 def main():
+    # get the reviews
     reviews_list = get_documents()
 
-    print type(reviews_list)
-	
+    # get the unigram featureset
+    unigram_feats = get_features(reviews_list)
 	
 	
 if __name__ == '__main__':
