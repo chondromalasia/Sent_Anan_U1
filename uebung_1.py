@@ -8,8 +8,10 @@
 
 
 ################
-import random
+import random, string
 from nltk.corpus import movie_reviews, stopwords
+from nltx.util import ngrams
+import nltk
 
 def get_documents():
     """
@@ -29,18 +31,22 @@ def get_features(documents):
     print("Creating Unigram features")
     my_stopwords = stopwords.words('english')
 
-    # get the top 100 unigrams
-    for document in documents:
-        # if its not in the hash yet
-        for sentance in document:
-            for word in sentance:
-                if word not in my_stopwords and word not in unigrams.keys():
-                    word
+    # nltk's stopwords doesn't include punctuation
+    my_stopwords.extend(list(set(string.punctuation)))
+
+    test_words = nltk.FreqDist(w.lower() for w in movie_reviews.words() if w not in my_stopwords)
+    top_words = list(test_words.most_common(200))
+    return top_words
+    
             
 def get_more_features(documents):
     """
     Get bigrams
+    Probably could have done stopword removal as its own thing
     """
+    print ("Creating Bigram features")
+    my_stopwords = stopwords.words('english')
+    
 	
 
 def featuresets(features, documents):
@@ -62,6 +68,7 @@ def main():
 
     # get the unigram featureset
     unigram_feats = get_features(reviews_list)
+    bigram_feats = get_more_features(reviews_list)
 	
 	
 if __name__ == '__main__':
