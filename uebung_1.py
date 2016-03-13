@@ -11,8 +11,6 @@
 import random
 from nltk.corpus import movie_reviews, stopwords
 
-
-
 def get_documents():
     """
     Retrieve shuffled movie reviews from the nltk
@@ -21,21 +19,24 @@ def get_documents():
     return [(list(movie_reviews.words(fileid)), category)
             for category in movie_reviews.categories()
             for fileid in movie_reviews.fileids(category)]
-	
-	
 
 def get_features(documents):
     """
     Extract unigrams from the training set
     """
+    unigrams = {}
 
     print("Creating Unigram features")
+    my_stopwords = stopwords.words('english')
 
     # get the top 100 unigrams
-
-		
-	
-	
+    for document in documents:
+        # if its not in the hash yet
+        for sentance in document:
+            for word in sentance:
+                if word not in my_stopwords and word not in unigrams.keys():
+                    word
+            
 def get_more_features(documents):
     """
     Get bigrams
@@ -58,7 +59,6 @@ def main():
     # get the reviews
     reviews_list = get_documents()
     random.shuffle(reviews_list)
-    print type(reviews_list)
 
     # get the unigram featureset
     unigram_feats = get_features(reviews_list)
