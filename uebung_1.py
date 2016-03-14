@@ -5,7 +5,11 @@
 #### Heath Gordon ####
 ### 16 March 2016 #####
 
-
+"""
+Some thoughts in retrospect:
+probably should have make a 'get all words' function
+There are some nested fors that could have been those list maker things
+"""
 
 ################
 import random, string
@@ -59,12 +63,16 @@ def get_more_features(documents):
     """
     Get bigrams
     """
-    print ("Creating Bigram features")
+    print ("Creating Bigram features\n")
 
     my_stopwords = get_stopwords()
 
     # get list of all the words
-    all_words = [w.lower() for w in movie_reviews.words() if w not in my_stopwords]
+    all_words = []
+    for document in documents:
+        for word in document[0]:
+            if word not in my_stopwords:
+                all_words.append(word)
 
     # list of bigrams
     bigrams = list(ngrams(all_words, 2))
@@ -81,12 +89,30 @@ def featuresets(features, documents):
     the 'pos or negative' is the last element of each review
     review[x][1] should retrieve it
     """
+    feature_set = []
+
+    print("Building training set\n")
 
     for review in documents:
-        pass
-        
-        
-        
+        review_hash = {}
+        bigrams = list(ngrams(review[0], 2))
+
+        for feature in features:
+            # bigrams, god this is inelegant
+            if type(feature) == tuple:
+                if feature in bigrams:
+                    review_hash[feature] = True;
+
+            # unigrams
+            else:
+                if feature in review[0]:
+                    review_hash[feature] = True;
+
+        # build the list
+        feature_set.append((review_hash, review[1]))
+                    
+
+    return feature_set
 
 
 def train_test(features_sets, documents):
@@ -101,14 +127,15 @@ def main():
 
     # get the unigram featureset
     unigram_feats = get_features(reviews_list)
-    print unigram_feats
 
     # get bigrams
-    # bigram_feats = get_more_features(reviews_list)
+    bigram_feats = get_more_features(reviews_list)
 
-    # all_feats = unigram_feats + bigram_feats
-    # training_set = featuresets(all_feats, reviews_list)
+    all_feats = unigram_feats + bigram_feats
+    full_set = featuresets(all_feats, reviews_list)
 
+    train_set, test_set = full_set[:1800], full_set[200:]
+    classifier = nltk.NaiveBayesClassifier.train(train_set)
 	
 	
 if __name__ == '__main__':
