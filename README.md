@@ -1,13 +1,6 @@
-#Sentiment Analysis
-
-Uebung 1
-
-The instructions are in the pdf
+#Sentiment Analysis Uebung 1
 
 Heath todo:
 
 I mean, besides everything, you should add emacs's backups to the gitignore, maybe
-see if removing stopwords from the bigrams makes any sort of difference
 
-Just some notes,
-extracting Unigrams is turning out to be a pain, and it looks like stopwords doesn't filter out punctuation
