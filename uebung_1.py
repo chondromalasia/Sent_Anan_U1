@@ -16,6 +16,7 @@ import random, string
 from nltk.corpus import movie_reviews, stopwords
 from nltk.util import ngrams
 import nltk
+from sklearn import cross_validation
 
 def get_stopwords():
     # long story short, the NLTK's stopword list doesn't include punctuation
@@ -41,7 +42,7 @@ def get_features(documents):
     Extract unigrams from the training set
     """
     unigrams = {}
-    print("Creating Unigram features\n")
+    print("\tExtracting Unigram features\n")
 
     # get stopwords
     my_stopwords = get_stopwords()
@@ -63,7 +64,7 @@ def get_more_features(documents):
     """
     Get bigrams
     """
-    print ("Creating Bigram features\n")
+    print ("\tExtracting Bigram features\n")
 
     my_stopwords = get_stopwords()
 
@@ -91,7 +92,7 @@ def featuresets(features, documents):
     """
     feature_set = []
 
-    print("Creating feature set\n")
+    print("\tCreating Feature Set\n")
 
     for review in documents:
         review_hash = {}
@@ -115,31 +116,56 @@ def featuresets(features, documents):
     return feature_set
 
 
-def train_test(features_sets, documents):
+def train_test(train, test):
     """
-    Tests the training set.
+    I amended this a bit because I didn't really get it
+    but now it just runs the classifier and returns the accuracy
     """
+
+    print "\tTraining and Testing Classifier\n"
+
+    classifier = nltk.NaiveBayesClassifier.train(train)
+
+    # un-comment the next line if you want to see the most informative feats
+
+    classifier.show_most_informative_features(10)
+    
+    return nltk.classify.util.accuracy(classifier, test)
 	
     
 def main():
-    # get the reviews
+
+    # homebrew cross_fold
+    folds = 10
+
+    accuracy = 0
+    
+    # get the review
     reviews_list = get_documents()
-    train_set, test_set = reviews_list[:1800], reviews_list[200:]
 
-    # get the unigram featureset
-    unigram_feats = get_features(train_set)
+    fold_size = len(reviews_list)/folds
 
-    # get bigrams
-    bigram_feats = get_more_features(train_set)
+    for i in range(folds):
+        print "Round ", i+1
 
-    all_feats = unigram_feats + bigram_feats
-    train_set = featuresets(all_feats, train_set)
-    test_set = featuresets(all_feats, test_set)
+        # split up set
+        test_set = reviews_list[i*fold_size:][:fold_size]
+        train_set = reviews_list[:i*fold_size] + reviews_list[(i+1)*fold_size:]
 
-    classifier = nltk.NaiveBayesClassifier.train(train_set)
+        # get unigram features
+        unigram_feats = get_features(train_set)
 
-    accuracy = nltk.classify.util.accuracy(classifier, test_set)
-    print accuracy
+        # get bigram features
+        bigram_feats = get_more_features(train_set)
+
+        all_feats = unigram_feats + bigram_feats
+        train_set = featuresets(all_feats, train_set)
+        test_set = featuresets(all_feats, test_set)
+
+        accuracy += train_test(train_set, test_set)
+
+
+    print "Final Accuracy: ", (accuracy/folds)
 	
 	
 if __name__ == '__main__':

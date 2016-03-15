@@ -1,8 +1,223 @@
 Retrieving Movie Reviews
 
-Creating Unigram features
+Round  1
+	Extracting Unigram features
 
-Creating Bigram features
+	Extracting Bigram features
 
-Building training set
+	Creating Feature Set
 
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      5.8 : 1.0
+      (u'dark', u'city') = True              pos : neg    =      5.3 : 1.0
+      (u'toy', u'story') = True              pos : neg    =      4.9 : 1.0
+ (u'saving', u'private') = True              pos : neg    =      4.5 : 1.0
+       (u'like', u'one') = True              neg : pos    =      3.9 : 1.0
+      (u'tom', u'hanks') = True              pos : neg    =      3.4 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.4 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      3.3 : 1.0
+      (u'young', u'man') = True              pos : neg    =      3.3 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.3 : 1.0
+Round  2
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      6.8 : 1.0
+      (u'dark', u'city') = True              pos : neg    =      5.5 : 1.0
+     (u'really', u'bad') = True              neg : pos    =      4.2 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.5 : 1.0
+      (u'tom', u'hanks') = True              pos : neg    =      3.2 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      3.2 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.1 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.1 : 1.0
+       (u'good', u'job') = True              pos : neg    =      3.0 : 1.0
+      (u'toy', u'story') = True              pos : neg    =      2.9 : 1.0
+Round  3
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      7.4 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      4.1 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      4.1 : 1.0
+      (u'young', u'man') = True              pos : neg    =      3.5 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      3.3 : 1.0
+       (u'good', u'job') = True              pos : neg    =      3.3 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.2 : 1.0
+     (u'really', u'bad') = True              neg : pos    =      2.9 : 1.0
+   (u'pulp', u'fiction') = True              pos : neg    =      2.7 : 1.0
+(u'computer', u'generated') = True              pos : neg    =      2.6 : 1.0
+Round  4
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'dark', u'city') = True              pos : neg    =      9.6 : 1.0
+      (u'bad', u'movie') = True              neg : pos    =      6.2 : 1.0
+      (u'young', u'man') = True              pos : neg    =      3.7 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.5 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      3.4 : 1.0
+       (u'good', u'job') = True              pos : neg    =      3.3 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.2 : 1.0
+     (u'really', u'bad') = True              neg : pos    =      3.0 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.0 : 1.0
+   (u'jackie', u'brown') = True              pos : neg    =      3.0 : 1.0
+Round  5
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      6.8 : 1.0
+      (u'tom', u'hanks') = True              pos : neg    =      4.3 : 1.0
+       (u'like', u'one') = True              neg : pos    =      3.8 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.4 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.3 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.1 : 1.0
+      (u'young', u'man') = True              pos : neg    =      3.1 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      3.0 : 1.0
+      (u'toy', u'story') = True              pos : neg    =      2.8 : 1.0
+       (u'good', u'job') = True              pos : neg    =      2.8 : 1.0
+Round  6
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      5.8 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      4.4 : 1.0
+      (u'van', u'damme') = True              neg : pos    =      3.8 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.7 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.6 : 1.0
+      (u'tom', u'hanks') = True              pos : neg    =      3.3 : 1.0
+      (u'toy', u'story') = True              pos : neg    =      3.3 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      3.3 : 1.0
+       (u'good', u'job') = True              pos : neg    =      3.0 : 1.0
+       (u'like', u'one') = True              neg : pos    =      3.0 : 1.0
+Round  7
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      5.8 : 1.0
+      (u'dark', u'city') = True              pos : neg    =      5.0 : 1.0
+ (u'saving', u'private') = True              pos : neg    =      4.5 : 1.0
+       (u'one', u'film') = True              pos : neg    =      3.7 : 1.0
+      (u'young', u'man') = True              pos : neg    =      3.3 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.3 : 1.0
+      (u'tom', u'hanks') = True              pos : neg    =      3.3 : 1.0
+       (u'good', u'job') = True              pos : neg    =      3.3 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      3.3 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.3 : 1.0
+Round  8
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      6.9 : 1.0
+      (u'dark', u'city') = True              pos : neg    =      5.6 : 1.0
+      (u'tom', u'hanks') = True              pos : neg    =      4.8 : 1.0
+       (u'one', u'film') = True              pos : neg    =      4.2 : 1.0
+        (u'de', u'niro') = True              pos : neg    =      4.0 : 1.0
+       (u'like', u'one') = True              neg : pos    =      3.9 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.6 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.4 : 1.0
+    (u'even', u'better') = True              pos : neg    =      3.4 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.3 : 1.0
+Round  9
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      5.9 : 1.0
+     (u'one', u'liners') = True              neg : pos    =      3.7 : 1.0
+      (u'toy', u'story') = True              pos : neg    =      3.6 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.3 : 1.0
+   (u'pulp', u'fiction') = True              pos : neg    =      3.2 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.2 : 1.0
+      (u'young', u'man') = True              pos : neg    =      3.1 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.1 : 1.0
+       (u'good', u'job') = True              pos : neg    =      2.8 : 1.0
+     (u'even', u'worse') = True              neg : pos    =      2.8 : 1.0
+Round  10
+	Extracting Unigram features
+
+	Extracting Bigram features
+
+	Creating Feature Set
+
+	Creating Feature Set
+
+	Training and Testing Classifier
+
+Most Informative Features
+      (u'bad', u'movie') = True              neg : pos    =      8.2 : 1.0
+   (u'jackie', u'brown') = True              pos : neg    =      4.6 : 1.0
+     (u'really', u'bad') = True              neg : pos    =      3.9 : 1.0
+      (u'van', u'damme') = True              neg : pos    =      3.7 : 1.0
+      (u'young', u'man') = True              pos : neg    =      3.5 : 1.0
+    (u'truman', u'show') = True              pos : neg    =      3.4 : 1.0
+      (u'tom', u'hanks') = True              pos : neg    =      3.3 : 1.0
+   (u'five', u'minutes') = True              neg : pos    =      3.3 : 1.0
+     (u'home', u'alone') = True              neg : pos    =      3.2 : 1.0
+   (u'private', u'ryan') = True              pos : neg    =      3.1 : 1.0
+Final Accuracy:  0.599
