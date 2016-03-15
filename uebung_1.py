@@ -91,7 +91,7 @@ def featuresets(features, documents):
     """
     feature_set = []
 
-    print("Building training set\n")
+    print("Creating feature set\n")
 
     for review in documents:
         review_hash = {}
@@ -124,18 +124,22 @@ def train_test(features_sets, documents):
 def main():
     # get the reviews
     reviews_list = get_documents()
+    train_set, test_set = reviews_list[:1800], reviews_list[200:]
 
     # get the unigram featureset
-    unigram_feats = get_features(reviews_list)
+    unigram_feats = get_features(train_set)
 
     # get bigrams
-    bigram_feats = get_more_features(reviews_list)
+    bigram_feats = get_more_features(train_set)
 
     all_feats = unigram_feats + bigram_feats
-    full_set = featuresets(all_feats, reviews_list)
+    train_set = featuresets(all_feats, train_set)
+    test_set = featuresets(all_feats, test_set)
 
-    train_set, test_set = full_set[:1800], full_set[200:]
     classifier = nltk.NaiveBayesClassifier.train(train_set)
+
+    accuracy = nltk.classify.util.accuracy(classifier, test_set)
+    print accuracy
 	
 	
 if __name__ == '__main__':
